@@ -1,0 +1,106 @@
+#----------------------------------------
+# plugins
+#----------------------------------------
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+source ~/.config/nvim/plugins/NERDTree.rc.vim
+'''
+
+[[plugins]]
+repo = 'qpkorr/vim-renamer'
+
+[[plugins]]
+repo = 'w0rp/ale'
+hook_add = '''
+source ~/.config/nvim/plugins/ale.rc.vim
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+# For use ddc with lsp-vim
+[[plugins]]
+repo = 'shun/ddc-vim-lsp'
+
+[[plugins]]
+repo = 'Shougo/ddc-nvim-lsp'
+
+# For use deno
+[[plugins]]
+repo = 'vim-denops/denops.vim'
+
+# View popup window 
+[[plugins]]
+repo = 'Shougo/pum.vim'
+
+# For use editor config
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
+
+#----------------------------------------
+# 補完source 
+#----------------------------------------
+# Complement near the cursor 
+[[plugins]]
+repo = 'Shougo/ddc-around'
+
+# Complement the file name
+[[plugins]]
+repo = 'LumaKernel/ddc-file'
+
+# Complement the word
+[[plugins]]
+repo = 'ujihisa/neco-look'
+
+[[plugins]]
+repo = 'Shougo/ddc-matcher_head'
+
+
+#----------------------------------------
+# 補完filter
+#----------------------------------------
+# Filter to complete the word you are typing
+[[plugins]]
+repo = 'Shougo/ddc-matcher_head'
+
+# Filter to sort completion candidates appropriately 
+[[plugins]]
+repo = 'Shougo/ddc-sorter_rank'
+
+# Filter to prevent duplication of completion candidates
+[[plugins]]
+repo = 'Shougo/ddc-converter_remove_overlap'
+
+#----------------------------------------
+# Color & Syntax etc...
+#----------------------------------------
+[[plugins]]
+repo = 'gosukiwi/vim-atom-dark'
+
+[[plugins]]
+repo = 'posva/vim-vue'
+
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
+
+#----------------------------------------
+# LSP
+#----------------------------------------
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
