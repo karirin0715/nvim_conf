@@ -1,0 +1,85 @@
+#----------------------------------------
+# plugins
+#----------------------------------------
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+source ~/AppData/Local/nvim/plugins/NERDTree.rc.vim
+'''
+
+[[plugins]]
+repo = 'qpkorr/vim-renamer'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+# For use ddc
+[[plugins]]
+repo = 'vim-denops/denops.vim'
+
+#----------------------------------------
+# 補完source 
+#----------------------------------------
+[[plugins]]
+repo = 'Shougo/ddc-around'
+
+[[plugins]]
+repo = 'Shougo/ddc-ui-native'
+
+[[plugins]]
+repo = 'matsui54/ddc-buffer'
+
+[[plugins]]
+repo = 'shun/ddc-source-vim-lsp'
+
+[[plugins]]
+repo = 'tani/ddc-fuzzy'
+
+#----------------------------------------
+# Color & Syntax etc...
+#----------------------------------------
+[[plugins]]
+repo = 'gosukiwi/vim-atom-dark'
+
+[[plugins]]
+repo = 'posva/vim-vue'
+
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
+
+#----------------------------------------
+# LSP
+#----------------------------------------
+[[plugins]]
+repo = 'jmcantrell/vim-virtualenv'
+on_ft = ['python']
+
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+hook_add = '''
+source ~/AppData/Local/nvim/plugins/vim-lsp.rc.vim
+'''
+
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+
+
+#----------------------------------------
+# airline
+#----------------------------------------
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+hook_add = '''
+source ~/AppData/Local/nvim/plugins/airline.rc.vim
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
