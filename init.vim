@@ -132,9 +132,9 @@ let g:airline_powerline_fonts = 1
 "	\ [ 'z', 'y', 'x' ],
 "	\ [ 'c', 'b', 'a', 'error', 'warning']
 "	\ ]
-if !exists('g:airline_symbols')
-	let g:airline_symbols = {}
-endif
+" if !exists('g:airline_symbols')
+" 	let g:airline_symbols = {}
+" endif
 ""左側に使用されるセパレータ
 let g:airline_left_sep = '⮀'
 let g:airline_left_alt_sep = '⮁'
