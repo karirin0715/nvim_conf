@@ -17,8 +17,6 @@ if !isdirectory(s:dein_repo_dir)
 endif
 
 
-
-
 "runtimepathの追加
 let &runtimepath=s:dein_repo_dir .",". &runtimepath
 
@@ -34,7 +32,11 @@ if dein#load_state(s:dein_dir)
 
 	" プラグインリストを収めた TOML ファイル
 	" 予め TOML ファイルを用意しておく
-	let g:rc_dir    = expand("~/.config/nvim/")
+	let g:rc_dir = expand("~/.config/nvim/")
+	if has('win64') || has('win32')
+		g:rc_dir = expand("~/AppData/Local/nvim/")
+	endif
+		
 	let s:toml      = g:rc_dir . 'dein.toml'
 	let s:lazy_toml = g:rc_dir . 'dein_lazy.toml'
 

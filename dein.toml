@@ -10,7 +10,7 @@ repo = 'Shougo/context_filetype.vim'
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
-source ~/.config/nvim/plugins/NERDTree.rc.vim
+source `=g:rc_dir . 'plugins/NERDTree.rc.vim'`
 '''
 
 [[plugins]]
@@ -69,7 +69,7 @@ on_ft = ['python']
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
 hook_add = '''
-source ~/.config/nvim/plugins/vim-lsp.rc.vim
+source `=g:rc_dir . 'plugins/vim-lsp.rc.vim'`
 '''
 
 
@@ -83,7 +83,7 @@ repo = 'mattn/vim-lsp-settings'
 [[plugins]]
 repo = 'vim-airline/vim-airline'
 hook_add = '''
-source ~/.config/nvim/plugins/airline.rc.vim
+source `=g:rc_dir . 'plugins/airline.rc.vim'`
 '''
 
 [[plugins]]
