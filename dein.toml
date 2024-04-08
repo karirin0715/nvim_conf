@@ -10,7 +10,7 @@ repo = 'Shougo/context_filetype.vim'
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
-source ~/AppData/Local/nvim/plugins/NERDTree.rc.vim
+source ~/.config/nvim/plugins/NERDTree.rc.vim
 '''
 
 [[plugins]]
@@ -23,14 +23,20 @@ repo = 'tpope/vim-fugitive'
 [[plugins]]
 repo = 'vim-denops/denops.vim'
 
+[[plugins]]
+repo = 'Shougo/pum.vim'
+
+[[plugins]]
+repo = 'Shougo/ddc-ui-pum'
+
+# [[plugins]]
+# repo = 'Shougo/ddc-ui-native'
+
 #----------------------------------------
 # 補完source 
 #----------------------------------------
 [[plugins]]
 repo = 'Shougo/ddc-around'
-
-[[plugins]]
-repo = 'Shougo/ddc-ui-native'
 
 [[plugins]]
 repo = 'matsui54/ddc-buffer'
@@ -63,7 +69,7 @@ on_ft = ['python']
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
 hook_add = '''
-source ~/AppData/Local/nvim/plugins/vim-lsp.rc.vim
+source ~/.config/nvim/plugins/vim-lsp.rc.vim
 '''
 
 
@@ -77,9 +83,8 @@ repo = 'mattn/vim-lsp-settings'
 [[plugins]]
 repo = 'vim-airline/vim-airline'
 hook_add = '''
-source ~/AppData/Local/nvim/plugins/airline.rc.vim
+source ~/.config/nvim/plugins/airline.rc.vim
 '''
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
-

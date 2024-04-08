@@ -22,14 +22,4 @@ let g:lsp_signs_hint = {'text': '?'}
 nnoremap <F3> :<C-u>LspDefinition<CR>
 " 定義情報のホバー表示
 nnoremap K :<C-u>LspHover<CR>
-"
-" " 名前変更
-" nnoremap <LocalLeader>R :<C-u>LspRename<CR>
-" " 参照検索
-" nnoremap <LocalLeader>n :<C-u>LspReferences<CR>
-" " Lint結果をQuickFixで表示
-" nnoremap <LocalLeader>f :<C-u>LspDocumentDiagnostics<CR>
-" " テキスト整形
-" nnoremap <LocalLeader>s :<C-u>LspDocumentFormat<CR>
-" " オムニ補完を利用する場合、定義の追加
-" set omnifunc=lsp#complete
+

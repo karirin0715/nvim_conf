@@ -16,6 +16,9 @@ if !isdirectory(s:dein_repo_dir)
 	call system('git clone https://github.com/Shougo/dein.vim ' . shellescape(s:dein_repo_dir))
 endif
 
+
+
+
 "runtimepathの追加
 let &runtimepath=s:dein_repo_dir .",". &runtimepath
 
@@ -25,13 +28,13 @@ if dein#load_state(s:dein_dir)
 	"普段はCommentout
 	"tomlの修正時(pluginの削除時)、Uncomment
 	""↓---------↓
-    " call map(dein#check_clean(), "delete(v:val, 'rf')")
-    " let g:dein#auto_recache = 1
+  "call map(dein#check_clean(), "delete(v:val, 'rf')")
+  "let g:dein#auto_recache = 1
 	""↑---------↑
 
 	" プラグインリストを収めた TOML ファイル
 	" 予め TOML ファイルを用意しておく
-	let g:rc_dir    = expand("~/AppData/Local/nvim/")
+	let g:rc_dir    = expand("~/.config/nvim/")
 	let s:toml      = g:rc_dir . 'dein.toml'
 	let s:lazy_toml = g:rc_dir . 'dein_lazy.toml'
 
@@ -109,7 +112,7 @@ set columns=180		""表示列数
 set tabstop=2		""tab数=4
 set shiftwidth=2	""自動インデント=4
 set shortmess+=I	""nvimの開始時に挨拶メッセ時を非表示
-set fenc=utf-8		""ファイルエンコードをutf-8
+set fenc=utf-8		""ファイルエンコードをutf-
 set enc=utf-8		""エディタエンコードをutf-8
 set clipboard=unnamed ""クリップボード操作可能に
 set hidden			""編集注にBuffer移動可能に
@@ -125,9 +128,13 @@ colorscheme atom-dark-256
 "true colors
 set termguicolors
 
+
 "vue
-autocmd FileType vue syntax sync fromstart
+augroup vueset
+	autocmd!
+	autocmd FileType vue syntax sync fromstart
+augroup END
+
 
 "LSP-Log
-
 let g:denops_disable_version_check = 1
