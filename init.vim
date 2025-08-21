@@ -1,3 +1,4 @@
+echo 'hello'
 if &compatible
 	set nocompatible
 endif
@@ -20,6 +21,12 @@ endif
 "runtimepathの追加
 let &runtimepath=s:dein_repo_dir .",". &runtimepath
 
+if has('win64') || has('win32')
+	let g:rc_dir = expand("~/AppData/Local/nvim/")
+else
+	let g:rc_dir = expand("~/.config/nvim/")
+endif
+
 if dein#load_state(s:dein_dir)
 	call dein#begin(s:dein_dir)
 
@@ -32,11 +39,6 @@ if dein#load_state(s:dein_dir)
 
 	" プラグインリストを収めた TOML ファイル
 	" 予め TOML ファイルを用意しておく
-	let g:rc_dir = expand("~/.config/nvim/")
-	if has('win64') || has('win32')
-		g:rc_dir = expand("~/AppData/Local/nvim/")
-	endif
-		
 	let s:toml      = g:rc_dir . 'dein.toml'
 	let s:lazy_toml = g:rc_dir . 'dein_lazy.toml'
 
@@ -80,6 +82,13 @@ if has('mac')
     autocmd InsertLeave * :call system(g:imeoff)
   augroup END
   noremap <silent> <ESC> <ESC>:call system(g:imeoff)<CR>
+elseif has('win64') || has('win32')
+  augroup MyIMEGroup
+    autocmd!
+    autocmd InsertEnter * silent call chansend(v:stderr, "\e[<r")
+  	autocmd InsertLeave * silent call chansend(v:stderr, "\e[<s\e[<0t")
+    autocmd VimLeave * silent call chansend(v:stderr, "\e[<0t\e[<s")
+  augroup END
 endif
 
 "----------------------------------------
